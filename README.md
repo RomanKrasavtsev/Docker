@@ -6,6 +6,10 @@ docker run --name my-mysql -e MYSQL_ROOT_PASSWORD=$PASSWORD -d -p 3306:3306 -v ~
 docker stop $ID
 cp -R /usr/local/mysql/data/ ~/Documents/mysql
 docker start $ID
+docker exec -it $ID bash
+mysql -uroot -p$PASSWORD
+CREATE USER '$USER'@'%' IDENTIFIED BY '$PASSWORD';
+GRANT ALL PRIVILEGES ON *.* TO '$USER'@'%';
 ```
 
 ## Redis
