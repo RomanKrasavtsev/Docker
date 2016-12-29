@@ -13,6 +13,13 @@ CREATE USER '$USER'@'%' IDENTIFIED BY '$PASSWORD';
 GRANT ALL PRIVILEGES ON *.* TO '$USER'@'%';
 ```
 
+No password access
+```
+CREATE USER 'root'@'%'
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%';
+```
+
+
 ## Redis
 ```
 docker run --name vashkontrol-redis -d -p 6379:6379 -v ~/Documents/redis/:/data/ redis
