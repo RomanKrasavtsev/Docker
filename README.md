@@ -27,3 +27,16 @@ docker stop $ID
 cp 
 docker start $ID
 ```
+
+# nginx
+```
+docker run --name nginx -d -p 80:80 nginx
+docker exec -it nginx bash
+```
+
+# vim
+```
+docker exec -it $NAME bash
+apt-get update
+apt-get install vim
+```
