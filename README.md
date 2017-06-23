@@ -32,6 +32,7 @@ docker start $ID
 ```
 docker run --name nginx -d -p 80:80 nginx
 docker exec -it nginx bash
+vi /etc/nginx/nginx.conf 
 ```
 
 # vim
